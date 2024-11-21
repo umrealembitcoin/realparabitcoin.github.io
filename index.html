@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Bitcoin</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>1 Real em Bitcoin Hoje</h1>
+        <div class="logo">
+            <img src="bitcoin-logo.png" alt="Bitcoin Logo">
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="info-block">
+            <h2>Bloco Que Está Sendo Minerado</h2>
+            <p id="last-block">Carregando...</p>
+        </section>
+
+        <section class="info-block">
+            <h2>Data Legacy</h2>
+            <p id="data-legacy">Carregando...</p>
+        </section>
+
+        <section class="info-block">
+            <h2>Hashrate da Rede</h2>
+            <p id="hashrate_24h">Carregando...</p>
+        </section>
+
+        <section class="info-block">
+            <h2>Dominância BTC</h2>
+            <p id="dominancia_24">Carregando...</p>
+        </section>
+
+        <section class="info-block">
+            <h2>Clima na Capital do Bitcoin</h2>
+            <p id="weather-info">Carregando informações do clima...</p>
+        </section>
+
+        <section class="info-block">
+            <h2>Cotação do Dólar</h2>
+            <p id="dollar-to-real">Carregando cotação do dólar...</p>
+        </section>
+
+            <!-- Campo para inserir quantidade de Reais -->
+        <div class="conversion-block">
+            <h2>Converter Reais para Bitcoin</h2>
+            <div class="card">
+                <p>Digite o valor em R$:</p>
+                <input type="number" id="brl-input" placeholder="Ex: 100" min="0" oninput="convertBrlToBtc()" />
+                <h3>Isso compra <span id="btc-brl">0</span> BTC</h2>
+            </div>
+        </div>
+
+        <!-- Campo para inserir quantidade de Dólares -->
+        <div class="conversion-block">
+            <h2>Converter Dólares para Bitcoin</h2>
+            <div class="card">
+                <p>Digite o valor USD:</p>
+                <input type="number" id="usd-input" placeholder="Ex: 100" min="0" oninput="convertUsdToBtc()" />
+                <h3>Isso compra <span id="btc-usd">0</span> BTC</h3>
+            </div>
+        </div>
+
+
+    <script src="cotacao.js"></script>
+    <script src="dados.js"></script>
+    <script src="data.js"></script>
+    <script src="clima.js"></script>
+    <script src="dolar.js"></script>
+</body>
+</html>
